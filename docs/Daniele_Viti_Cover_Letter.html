@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniele Viti — Cover Letter</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --sidebar-bg: #1b2838;
+    --sidebar-dark: #151f2b;
+    --accent: #4fc3c9;
+    --accent-light: #5dd6dc;
+    --coral: #e8734a;
+    --coral-light: #f0956e;
+    --main-bg: #f5f6f8;
+    --card-bg: #ffffff;
+    --text-dark: #1a1a2e;
+    --text-muted: #5a6577;
+    --text-light: #c8d0dc;
+    --text-sidebar: #a8b4c4;
+    --tag-bg: #e8edf3;
+    --tag-text: #3a4a5c;
+    --border: #e2e6ec;
+  }
+
+  html { font-size: 15px; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #0f1923;
+    color: var(--text-dark);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  .cl-container {
+    display: flex;
+    max-width: 1180px;
+    margin: 0 auto;
+    min-height: 100vh;
+    box-shadow: 0 0 80px rgba(0,0,0,0.4);
+  }
+
+  /* ── SIDEBAR ── */
+  .sidebar {
+    width: 280px;
+    min-width: 280px;
+    background: var(--sidebar-bg);
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar-header {
+    text-align: center;
+    padding: 2.2rem 1.5rem 1.5rem;
+    background: var(--sidebar-dark);
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid var(--accent);
+    margin: 0 auto 1rem;
+    object-fit: cover;
+  }
+
+  .sidebar-header h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0.1rem;
+  }
+
+  .sidebar-header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .sidebar-subtitle {
+    font-size: 0.65rem;
+    color: var(--text-sidebar);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 0.6rem;
+    font-weight: 500;
+  }
+
+  .sidebar-body { padding: 1.2rem 1.4rem 2rem; flex: 1; }
+
+  .sidebar-section { margin-bottom: 1.6rem; }
+
+  .sidebar-section-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--coral);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .sidebar-section-title::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: var(--coral);
+    border-radius: 50%;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.82rem;
+    color: var(--text-sidebar);
+    margin-bottom: 0.4rem;
+    text-decoration: none;
+  }
+
+  a.contact-item:hover { color: var(--accent-light); }
+
+  .contact-icon {
+    width: 16px;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .highlight-item {
+    font-size: 0.82rem;
+    color: var(--text-sidebar);
+    margin-bottom: 0.45rem;
+    padding-left: 1rem;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .highlight-item::before {
+    content: '\25B8';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 0.75rem;
+  }
+
+  .sidebar-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+
+  .sidebar-tag {
+    font-size: 0.68rem;
+    background: rgba(79, 195, 201, 0.12);
+    color: var(--accent-light);
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    border: 1px solid rgba(79, 195, 201, 0.15);
+    font-family: 'Fira Code', monospace;
+    font-weight: 500;
+  }
+
+  .sidebar-footer {
+    padding: 1rem 1.4rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    text-align: center;
+  }
+
+  .sidebar-footer a {
+    display: inline-block;
+    font-size: 0.72rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-family: 'Fira Code', monospace;
+    padding: 0.35rem 0.8rem;
+    border: 1px solid rgba(79, 195, 201, 0.3);
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+
+  .sidebar-footer a:hover {
+    background: rgba(79, 195, 201, 0.1);
+  }
+
+  /* ── MAIN ── */
+  .main {
+    flex: 1;
+    background: var(--main-bg);
+    padding: 2.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .letter-header { margin-bottom: 2rem; }
+
+  .letter-header h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1.1;
+    margin-bottom: 0.3rem;
+  }
+
+  .letter-header .tagline {
+    font-size: 0.92rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+
+  .letter-meta {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 0.3rem;
+  }
+
+  .letter-date {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.8rem;
+  }
+
+  .letter-recipient {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .letter-body {
+    flex: 1;
+  }
+
+  .letter-body p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    max-width: 640px;
+    text-align: justify;
+  }
+
+  .letter-body p strong {
+    color: var(--text-dark);
+    font-weight: 600;
+  }
+
+  .letter-body .greeting {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .inline-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 1rem 0;
+  }
+
+  .inline-list li {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    padding-left: 1rem;
+    position: relative;
+    margin-bottom: 0.3rem;
+    line-height: 1.6;
+  }
+
+  .inline-list li::before {
+    content: '\25B8';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 0.8rem;
+  }
+
+  .letter-closing {
+    margin-top: 1.5rem;
+  }
+
+  .letter-closing p {
+    margin-bottom: 0.3rem;
+  }
+
+  .signature {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+
+  .signature-role {
+    font-size: 0.82rem;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .letter-footer {
+    margin-top: auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .letter-footer span {
+    font-size: 0.73rem;
+    color: #aab3c0;
+    font-style: italic;
+  }
+
+  .encl-tag {
+    font-size: 0.7rem;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    font-weight: 500;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 860px) {
+    .cl-container { flex-direction: column; }
+    .sidebar { width: 100%; min-width: 100%; }
+    .main { padding: 1.5rem 1.2rem; }
+    .letter-header h1 { font-size: 1.8rem; }
+  }
+
+  /* Print */
+  @media print {
+    body { background: #fff; }
+    .cl-container { box-shadow: none; max-width: 100%; }
+    .sidebar { background: var(--sidebar-bg) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div class="cl-container">
+
+  <!-- ── SIDEBAR ── -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img class="avatar" src="profile.jpg" alt="Daniele Viti">
+      <h2>DANIELE</h2>
+      <h3>VITI</h3>
+      <div class="sidebar-subtitle">INFRASTRUCTURE &middot; DEVOPS &middot; FULL-STACK</div>
+    </div>
+
+    <div class="sidebar-body">
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">CONTACT</div>
+        <div class="contact-item"><span class="contact-icon">&#x1F4CD;</span> Foligno (PG), Italy</div>
+        <a class="contact-item" href="https://linkedin.com/in/danieleviti" target="_blank"><span class="contact-icon">&#x1F517;</span> linkedin.com/in/danieleviti</a>
+        <a class="contact-item" href="https://github.com/dnviti" target="_blank"><span class="contact-icon">&#x1F4BB;</span> github.com/dnviti</a>
+        <a class="contact-item" href="https://arsenalepam.com" target="_blank"><span class="contact-icon">&#x1F310;</span> arsenalepam.com</a>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">KEY HIGHLIGHTS</div>
+        <div class="highlight-item">Enterprise virtualisation &amp; Linux infrastructure at Var Group</div>
+        <div class="highlight-item">Creator of Arsenale PAM &mdash; open-source privileged access management</div>
+        <div class="highlight-item">Author of CTDF &mdash; Claude Code plugin (v3.1.0, 63 commits)</div>
+        <div class="highlight-item">Private datacenter operator with self-hosted AI inference</div>
+        <div class="highlight-item">Arctic Code Vault Contributor, 82 GitHub repos</div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">CORE STACK</div>
+        <div class="sidebar-tags">
+          <span class="sidebar-tag">Node.js</span>
+          <span class="sidebar-tag">React 19</span>
+          <span class="sidebar-tag">TypeScript</span>
+          <span class="sidebar-tag">Python</span>
+          <span class="sidebar-tag">PostgreSQL</span>
+          <span class="sidebar-tag">Docker</span>
+          <span class="sidebar-tag">Kubernetes</span>
+          <span class="sidebar-tag">VMware</span>
+          <span class="sidebar-tag">OpenShift</span>
+          <span class="sidebar-tag">Linux</span>
+          <span class="sidebar-tag">CI/CD</span>
+          <span class="sidebar-tag">Caddy</span>
+          <span class="sidebar-tag">Cilium</span>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">LANGUAGES</div>
+        <div class="contact-item"><span class="contact-icon">&#x1F1EE;&#x1F1F9;</span> Italian &mdash; Native</div>
+        <div class="contact-item"><span class="contact-icon">&#x1F1EC;&#x1F1E7;</span> English &mdash; Professional</div>
+      </div>
+
+    </div>
+
+    <div class="sidebar-footer">
+      <a href="https://github.com/dnviti" target="_blank">&#x1F4CE; Full CV attached</a>
+    </div>
+  </aside>
+
+  <!-- ── MAIN ── -->
+  <main class="main">
+
+    <div class="letter-header">
+      <h1>Cover Letter</h1>
+      <div class="tagline">Infrastructure &amp; DevOps Engineer &nbsp;|&nbsp; Full-Stack Developer &nbsp;|&nbsp; Open-Source Maintainer</div>
+    </div>
+
+    <div class="letter-date">March 2026</div>
+
+    <div class="letter-recipient">
+      Dear Hiring Manager,
+    </div>
+
+    <div class="letter-body">
+
+      <p>
+        I am writing to express my interest in contributing my infrastructure, DevOps, and full-stack development
+        expertise to your team. With hands-on experience managing enterprise virtualisation environments at
+        <strong>Var Group</strong>, one of Italy's leading IT integrators, and a proven track record building
+        production-grade open-source software, I am confident I can deliver immediate and lasting value.
+      </p>
+
+      <p>
+        In my current role, I design, deploy, and manage <strong>VMware vSphere</strong> and <strong>OpenShift</strong>
+        infrastructure, administer Linux servers across RHEL, Debian, and Fedora, and orchestrate containerised workloads
+        with Docker, Kubernetes, and Cilium. I collaborate closely with Digital Security teams on hardening, compliance,
+        and hybrid-cloud migrations &mdash; giving me a well-rounded perspective that bridges development, operations,
+        and security.
+      </p>
+
+      <p>
+        Beyond my day-to-day responsibilities, I am the creator and lead developer of
+        <strong>Arsenale PAM</strong> &mdash; a self-hosted privileged access management platform built with
+        Node.js, React 19, PostgreSQL, and Socket.IO. Arsenale supports SSH, RDP, and VNC sessions with
+        AES-256-GCM encrypted vaults, multi-tenancy, and session recording, positioning it competitively against
+        commercial solutions like CyberArk and Azure Bastion. Key aspects that set me apart:
+      </p>
+
+      <ul class="inline-list">
+        <li>Architected a complete PAM platform from the ground up &mdash; backend, frontend, auth (JWT, TOTP, Argon2id), and infrastructure.</li>
+        <li>Built and maintain <strong>CTDF</strong>, a Claude Code plugin with a 9-stage gated release pipeline, parallel sub-agent orchestration, and agentic fleet CI/CD (63 commits, MIT licensed).</li>
+        <li>Operate a private datacenter running self-hosted AI inference (llama.cpp, Qwen models) with RAG pipelines &mdash; demonstrating end-to-end infrastructure ownership.</li>
+        <li>Arctic Code Vault Contributor with 82 public repositories, reflecting a deep commitment to the open-source community.</li>
+      </ul>
+
+      <p>
+        I am a strong advocate of <strong>AI-assisted development</strong>. Claude Code is my daily driver for
+        agentic coding, infrastructure automation, code review, and security analysis. This workflow allows me to
+        deliver high-quality work at a pace that would otherwise require a larger team &mdash; a mindset I would
+        bring to any engineering organisation looking to move fast without sacrificing quality.
+      </p>
+
+      <p>
+        I am particularly drawn to environments where infrastructure reliability, security, and developer experience
+        are treated as first-class priorities. I thrive when given ownership of problems end-to-end and the autonomy
+        to drive solutions from architecture through deployment.
+      </p>
+
+      <p>
+        I would welcome the opportunity to discuss how my skills and experience align with your team's goals.
+        Thank you for your time and consideration.
+      </p>
+
+      <div class="letter-closing">
+        <p>Kind regards,</p>
+        <div class="signature">Daniele Viti</div>
+        <div class="signature-role">Infrastructure &amp; DevOps Engineer | Full-Stack Developer</div>
+      </div>
+    </div>
+
+    <div class="letter-footer">
+      <span>Encl: Curriculum Vitae</span>
+      <span class="encl-tag">arsenalepam.com</span>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>
