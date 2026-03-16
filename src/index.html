@@ -1117,7 +1117,7 @@
       <br>
       <p>
         On my own time, I created <span class="highlight">Arsenale</span> &mdash; an open-source
-        Privileged Access Management platform built with Node.js, React 19, and PostgreSQL &mdash;
+        Privileged Access Management platform built with Node.js, React, and PostgreSQL &mdash;
         and <span class="highlight">CTDF</span>, a Claude Code plugin for structured task management
         and gated release pipelines. I run a private datacenter for self-hosted services including
         AI inference with local LLMs.
@@ -1128,20 +1128,12 @@
       <img class="about-photo" src="profile.jpg" alt="Daniele Viti" onerror="this.style.display='none'">
       <div class="stats-grid">
         <div class="stat-card">
-          <div class="stat-number" data-target="82">0</div>
-          <div class="stat-label">GitHub Repos</div>
+          <div class="stat-label">Arsenale PAM</div>
+          <div class="stat-sublabel">Open-Source PAM Platform</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number" data-target="63">0</div>
-          <div class="stat-label">CTDF Commits</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number" data-target="5">0</div>
-          <div class="stat-label">CTDF Skills</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number" data-target="9">0</div>
-          <div class="stat-label">Release Gates</div>
+          <div class="stat-label">CTDF</div>
+          <div class="stat-sublabel">Claude Code Plugin</div>
         </div>
       </div>
     </div>
@@ -1184,11 +1176,11 @@
         <a href="https://github.com/dnviti" target="_blank" rel="noopener">github.com/dnviti</a>
       </div>
       <ul class="exp-bullets">
-        <li>Architected a self-hosted PAM platform: SSH (ssh2), RDP (guacd), VNC + AES-256-GCM encrypted vault.</li>
-        <li>Stack: Node.js/Express, React 19, PostgreSQL 16 + Prisma, Socket.IO. Auth: JWT, TOTP, Argon2id.</li>
-        <li>Multi-tenancy, drag-and-drop folders, multi-tab sessions, session recording.</li>
+        <li>Architected a self-hosted PAM platform with SSH, RDP, and VNC support plus encrypted credential vault.</li>
+        <li>Full-stack: Node.js/Express, React, PostgreSQL + Prisma, Socket.IO. Auth: JWT, TOTP, Argon2id.</li>
+        <li>Multi-tenancy, role-based access control, drag-and-drop folders, multi-tab sessions, session recording.</li>
         <li>Developed entirely with Claude Code agentic workflows; competitive vs CyberArk, Azure Bastion, Keeper.</li>
-        <li>Roadmap: AI log analysis, IP blacklist, MCP integration, Lua plugins, webhooks, SBOM (SPDX).</li>
+        <li>Roadmap: AI log analysis, IP blacklist, MCP integration, Lua plugins, webhooks.</li>
       </ul>
     </div>
   </div>
@@ -1214,22 +1206,22 @@
         <div class="project-title">Arsenale PAM</div>
         <p class="project-desc">
           A self-hosted Privileged Access Management platform with SSH, RDP, and VNC support.
-          Features AES-256-GCM encrypted vault, multi-tenancy, drag-and-drop session management,
-          and session recording. Competitive alternative to CyberArk, Azure Bastion, and Keeper.
+          Features encrypted credential vault, multi-tenancy, role-based access control,
+          session recording, and audit logging. Competitive alternative to CyberArk, Azure Bastion, and Keeper.
         </p>
         <div class="project-tags">
           <span class="project-tag">Node.js</span>
-          <span class="project-tag">React 19</span>
+          <span class="project-tag">React</span>
           <span class="project-tag">PostgreSQL</span>
           <span class="project-tag">Prisma</span>
           <span class="project-tag purple">Socket.IO</span>
-          <span class="project-tag purple">AES-256-GCM</span>
-          <span class="project-tag orange">JWT</span>
-          <span class="project-tag orange">TOTP</span>
+          <span class="project-tag purple">Encryption</span>
+          <span class="project-tag orange">MFA</span>
+          <span class="project-tag orange">RBAC</span>
         </div>
         <div class="project-links">
           <a class="project-link" href="https://arsenalepam.com" target="_blank" rel="noopener">&#x1F310; Live Site</a>
-          <a class="project-link" href="https://github.com/dnviti" target="_blank" rel="noopener">&#x1F4BB; Source Code</a>
+          <a class="project-link" href="https://github.com/dnviti/arsenale" target="_blank" rel="noopener">&#x1F4BB; Source Code</a>
         </div>
       </div>
     </div>
@@ -1241,14 +1233,13 @@
         claude-task-development-framework
       </div>
       <div class="project-card-body">
-        <div class="project-title" style="display: flex; align-items: center; gap: 0.75rem;">
+        <div class="project-title">
           CTDF
-          <span class="ai-card-version">v3.1.0</span>
         </div>
         <p class="project-desc">
-          Claude Code plugin for structured task &amp; idea management with a 9-stage gated release pipeline,
-          parallel sub-agent orchestration, Git worktrees, GitHub/GitLab Issues integration, agentic fleet
-          CI/CD, and Docker tagging strategy. 5 skills, MIT licensed.
+          Project-agnostic Claude Code plugin for structured task &amp; idea management with gated release pipelines,
+          parallel sub-agent orchestration, Git worktree isolation, GitHub/GitLab Issues integration,
+          and Docker tagging strategy. MIT licensed.
         </p>
         <div class="project-tags">
           <span class="project-tag">Claude Code</span>
@@ -1269,7 +1260,7 @@
     <div class="project-small reveal reveal-delay-1">
       <span class="project-small-icon">&#x1F916;</span>
       <div class="project-small-title">Arsenale AI Chatbot</div>
-      <div class="project-small-desc">Self-hosted LLM (Qwen 3.5 0.8B / llama.cpp) with RAG pipeline, running on private datacenter infrastructure.</div>
+      <div class="project-small-desc">Self-hosted LLM inference with llama.cpp and RAG pipeline, running on private datacenter infrastructure.</div>
     </div>
     <div class="project-small reveal reveal-delay-2">
       <span class="project-small-icon">&#x1F527;</span>
@@ -1301,7 +1292,7 @@
         <span class="skill-tag">TypeScript</span>
         <span class="skill-tag">Node.js</span>
         <span class="skill-tag">Express</span>
-        <span class="skill-tag">React 19</span>
+        <span class="skill-tag">React</span>
         <span class="skill-tag">Python</span>
         <span class="skill-tag">PostgreSQL</span>
         <span class="skill-tag">Redis</span>
@@ -1404,16 +1395,16 @@
   <div class="ai-card reveal reveal-delay-1">
     <div class="ai-card-label">Power User & Plugin Author</div>
     <div class="ai-card-title">Claude Code Daily Driver</div>
-    <div class="ai-card-version">CTDF v3.1.0</div>
+    <div class="ai-card-version">CTDF</div>
     <p class="ai-card-desc">
       Claude Code is my primary development environment for all personal and open-source projects.
-      I built CTDF &mdash; a plugin with 5 slash-command skills, gated releases, per-PR sub-agents,
+      I built CTDF &mdash; a plugin with slash-command skills, gated releases, per-PR sub-agents,
       and multi-provider agentic fleet orchestration. Deep expertise in MCP server integration
       and prompt engineering for structured AI-driven development workflows.
     </p>
     <ul class="ai-bullets">
       <li data-icon="&#x1F4BB;">Primary environment for all open-source and personal development</li>
-      <li data-icon="&#x1F527;">Built CTDF: 5 skills, 9-stage gated releases, parallel sub-agent orchestration</li>
+      <li data-icon="&#x1F527;">Built CTDF: slash-command skills, gated releases, parallel sub-agent orchestration</li>
       <li data-icon="&#x1F50C;">MCP server integration &amp; prompt engineering expertise</li>
       <li data-icon="&#x1F4E1;">Infrastructure automation, code review, security analysis with AI</li>
     </ul>
