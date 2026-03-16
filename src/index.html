@@ -307,21 +307,6 @@
     box-shadow: 0 8px 30px rgba(0, 223, 162, 0.12);
   }
 
-  .btn.is-loading {
-    opacity: 0.7;
-    pointer-events: none;
-  }
-
-  button.btn {
-    cursor: pointer;
-    font-family: var(--font-body);
-  }
-
-  button.contact-pill {
-    cursor: pointer;
-    font-family: var(--font-body);
-    font-size: 0.85rem;
-  }
 
   .hero-scroll {
     position: absolute;
@@ -1104,7 +1089,6 @@
     <div class="hero-actions">
       <a href="#projects" class="btn btn-primary">Explore Projects &rarr;</a>
       <a href="cv.html" class="btn btn-outline" target="_blank">View CV</a>
-      <button class="btn btn-ghost" onclick="downloadPDF(this)">&#x1F4E5; Download PDF</button>
     </div>
   </div>
 
@@ -1464,10 +1448,6 @@
       <span class="contact-pill-icon">&#x1F4C4;</span>
       View CV
     </a>
-    <button class="contact-pill" onclick="downloadPDF(this)">
-      <span class="contact-pill-icon">&#x1F4E5;</span>
-      Download PDF
-    </button>
   </div>
 
   <div class="contact-location reveal reveal-delay-2">&#x1F4CD; Foligno (PG), Italy</div>
@@ -1555,71 +1535,6 @@
       }
     });
   });
-
-  // ── PDF download ──
-  async function downloadPDF(btn) {
-    const origHTML = btn.innerHTML;
-    btn.innerHTML = '&#x23F3; Generating&hellip;';
-    btn.classList.add('is-loading');
-
-    try {
-      // Lazy-load html2pdf.js
-      if (!window.html2pdf) {
-        await new Promise((res, rej) => {
-          const s = document.createElement('script');
-          s.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js';
-          s.onload = res;
-          s.onerror = rej;
-          document.head.appendChild(s);
-        });
-      }
-
-      // Pre-load CV fonts
-      const fontLink = document.createElement('link');
-      fontLink.rel = 'stylesheet';
-      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap';
-      document.head.appendChild(fontLink);
-
-      // Fetch and parse CV
-      const res = await fetch('cv.html');
-      const html = await res.text();
-      const doc = new DOMParser().parseFromString(html, 'text/html');
-
-      // Build offscreen render container
-      const wrapper = document.createElement('div');
-      wrapper.id = 'cv-pdf-render';
-      wrapper.style.cssText = 'position:fixed;left:-10000px;top:0;width:1180px;z-index:-1;background:#fff;';
-
-      const styleEl = document.createElement('style');
-      styleEl.textContent = Array.from(doc.querySelectorAll('style')).map(s => s.textContent).join('\n');
-      wrapper.appendChild(styleEl);
-
-      const cvContainer = doc.querySelector('.cv-container');
-      if (!cvContainer) throw new Error('CV container not found');
-      wrapper.appendChild(cvContainer.cloneNode(true));
-      document.body.appendChild(wrapper);
-
-      // Wait for fonts + rendering
-      await document.fonts.ready;
-      await new Promise(r => setTimeout(r, 600));
-
-      await html2pdf().set({
-        margin: 0,
-        filename: 'Daniele_Viti_CV.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2, useCORS: true, width: 1180, windowWidth: 1180, logging: false },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-      }).from(wrapper.querySelector('.cv-container')).save();
-
-      wrapper.remove();
-    } catch (err) {
-      console.error('PDF generation failed:', err);
-      window.open('cv.html', '_blank');
-    } finally {
-      btn.innerHTML = origHTML;
-      btn.classList.remove('is-loading');
-    }
-  }
 </script>
 </body>
 </html>
