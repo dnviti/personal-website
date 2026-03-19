@@ -18,10 +18,10 @@ I am writing to express my interest in contributing my infrastructure, DevOps, a
 
 In my current role, I design, deploy, and manage VMware vSphere and OpenShift infrastructure, administer Linux servers across RHEL, Debian, and Fedora, and orchestrate containerised workloads with Docker, Kubernetes, and Cilium. I collaborate closely with Digital Security teams on hardening, compliance, and hybrid-cloud migrations -- giving me a well-rounded perspective that bridges development, operations, and security.
 
-Beyond my day-to-day responsibilities, I am the creator and lead developer of Arsenale PAM -- a self-hosted privileged access management platform built with Node.js, React 19, PostgreSQL, and Socket.IO. Arsenale supports SSH, RDP, and VNC sessions with AES-256-GCM encrypted vaults, multi-tenancy, and session recording, positioning it competitively against commercial solutions like CyberArk and Azure Bastion. Key aspects that set me apart:
+Beyond my day-to-day responsibilities, I am the creator and lead developer of Arsenale PAM -- a self-hosted privileged access management platform built with Node.js, React, PostgreSQL, and Socket.IO. Arsenale supports SSH, RDP, and VNC sessions with AES-256-GCM encrypted vaults, multi-tenancy, and session recording, positioning it competitively against commercial solutions like CyberArk and Azure Bastion. Key aspects that set me apart:
 
 - Architected a complete PAM platform from the ground up -- backend, frontend, auth (JWT, TOTP, Argon2id), and infrastructure.
-- Built and maintain CTDF, a Claude Code plugin with a 9-stage gated release pipeline, parallel sub-agent orchestration, and agentic fleet CI/CD (63 commits, MIT licensed).
+- Built and maintain CodeClaw, a Claude Code plugin with a 9-stage gated release pipeline, parallel sub-agent orchestration, and agentic fleet CI/CD (MIT licensed).
 - Operate a private datacenter running self-hosted AI inference (llama.cpp, Qwen models) with RAG pipelines -- demonstrating end-to-end infrastructure ownership.
 - Arctic Code Vault Contributor with 82 public repositories, reflecting a deep commitment to the open-source community.
 
@@ -35,6 +35,6 @@ Kind regards,
 Daniele Viti
 Infrastructure & DevOps Engineer | Full-Stack Developer
 
-Core Stack: Node.js, React 19, TypeScript, Python, PostgreSQL, Docker, Kubernetes, VMware, OpenShift, Linux, CI/CD, Caddy, Cilium
+Core Stack: Node.js, React, TypeScript, Python, PostgreSQL, Docker, Kubernetes, VMware, OpenShift, Linux, CI/CD, Caddy, Cilium
 
 Encl: Curriculum Vitae

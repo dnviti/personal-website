@@ -367,8 +367,8 @@
     max-width: 680px;
   }
 
-  /* CTDF box */
-  .ctdf-box {
+  /* CodeClaw box */
+  .codeclaw-box {
     background: var(--card-bg);
     border: 1px solid var(--border);
     border-left: 4px solid var(--coral);
@@ -377,7 +377,7 @@
     margin-bottom: 1rem;
   }
 
-  .ctdf-title {
+  .codeclaw-title {
     font-size: 0.95rem;
     font-weight: 700;
     color: var(--coral);
@@ -387,7 +387,7 @@
     gap: 0.5rem;
   }
 
-  .ctdf-version {
+  .codeclaw-version {
     font-size: 0.65rem;
     background: var(--accent);
     color: #fff;
@@ -396,21 +396,21 @@
     font-weight: 600;
   }
 
-  .ctdf-desc {
+  .codeclaw-desc {
     font-size: 0.82rem;
     color: var(--text-muted);
     line-height: 1.55;
     margin-bottom: 0.4rem;
   }
 
-  .ctdf-link {
+  .codeclaw-link {
     font-size: 0.78rem;
     color: var(--accent);
     text-decoration: none;
     font-family: 'Fira Code', monospace;
   }
 
-  .ctdf-link:hover { text-decoration: underline; }
+  .codeclaw-link:hover { text-decoration: underline; }
 
   /* Claude bullets */
   .claude-bullets {
@@ -573,7 +573,7 @@
           <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-name">React 19</div>
+          <div class="skill-name">React</div>
           <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
         </div>
         <div class="skill-item">
@@ -610,7 +610,7 @@
       <div class="sidebar-section">
         <div class="sidebar-section-title">CLAUDE CODE</div>
         <div class="claude-item">Daily driver for agentic coding</div>
-        <div class="claude-item">Author of CTDF plugin (v3.1.0)</div>
+        <div class="claude-item">Author of CodeClaw plugin</div>
         <div class="claude-item">AI-assisted development workflows</div>
         <div class="claude-item">MCP server integration expertise</div>
       </div>
@@ -658,7 +658,7 @@
         <div class="sidebar-section-title">ACHIEVEMENTS</div>
         <div class="achievement-item"><span class="achievement-icon">&#x2B50;</span> Arctic Code Vault Contributor</div>
         <div class="achievement-item"><span class="achievement-icon">&#x2B50;</span> 82 GitHub Repositories</div>
-        <div class="achievement-item"><span class="achievement-icon">&#x2B50;</span> CTDF v3.1.0 &mdash; 63 commits</div>
+        <div class="achievement-item"><span class="achievement-icon">&#x2B50;</span> CodeClaw &mdash; Claude Code Plugin</div>
         <div class="achievement-item"><span class="achievement-icon">&#x2B50;</span> Open-Source PAM Platform</div>
       </div>
 
@@ -688,8 +688,8 @@
       <p class="summary-text">
         IT professional specialising in virtualisation infrastructure, server administration, and full-stack development.
         Currently at Var Group, one of Italy's leading IT integrators. Creator of Arsenale, an open-source PAM
-        platform (Node.js, React 19, PostgreSQL). Power user of Claude Code for AI-assisted agentic development,
-        and author of CTDF &mdash; a Claude Code plugin for structured task management and gated release pipelines.
+        platform (Node.js, React, PostgreSQL). Power user of Claude Code for AI-assisted agentic development,
+        and author of CodeClaw &mdash; a Claude Code plugin for structured task management and gated release pipelines.
         Runs a private datacenter for self-hosted services including AI inference.
       </p>
     </div>
@@ -720,7 +720,7 @@
         <div class="exp-company">Open Source &nbsp;|&nbsp; <a href="https://arsenalepam.com" target="_blank">arsenalepam.com</a> &nbsp;|&nbsp; <a href="https://github.com/dnviti" target="_blank">github.com/dnviti</a></div>
         <ul class="exp-list">
           <li>Architected a self-hosted PAM platform: SSH (ssh2), RDP (guacd), VNC + AES-256-GCM encrypted vault.</li>
-          <li>Stack: Node.js/Express, React 19, PostgreSQL 16 + Prisma, Socket.IO. Auth: JWT, TOTP, Argon2id.</li>
+          <li>Stack: Node.js/Express, React, PostgreSQL + Prisma, Socket.IO. Auth: JWT, TOTP, Argon2id.</li>
           <li>Multi-tenancy, drag-and-drop folders, multi-tab sessions, session recording.</li>
           <li>Developed entirely with Claude Code agentic workflows; competitive vs CyberArk, Azure Bastion, Keeper.</li>
           <li>Roadmap: AI log analysis, IP blacklist, MCP integration, Lua plugins, webhooks, SBOM (SPDX).</li>
@@ -732,19 +732,19 @@
     <div class="section">
       <div class="section-title"><span class="section-icon">&#x2328;&#xFE0F;</span> CLAUDE CODE &amp; AI-ASSISTED DEVELOPMENT</div>
 
-      <div class="ctdf-box">
-        <div class="ctdf-title">CTDF &mdash; Claude Task Development Framework <span class="ctdf-version">v3.1.0</span></div>
-        <p class="ctdf-desc">
-          Open-source Claude Code plugin for structured task &amp; idea management with a 9-stage gated release pipeline, parallel
+      <div class="codeclaw-box">
+        <div class="codeclaw-title">CodeClaw <span class="codeclaw-version">Claude Code Plugin</span></div>
+        <p class="codeclaw-desc">
+          Open-source Claude Code plugin for structured task &amp; idea management with a gated release pipeline, parallel
           sub-agent orchestration, Git worktrees, GitHub/GitLab Issues integration, agentic fleet CI/CD, and Docker tagging
-          strategy. 63 commits, 5 skills, MIT licensed.
+          strategy. MIT licensed.
         </p>
-        <a class="ctdf-link" href="https://github.com/dnviti/claude-task-development-framework" target="_blank">github.com/dnviti/claude-task-development-framework</a>
+        <a class="codeclaw-link" href="https://github.com/dnviti/codeclaw" target="_blank">github.com/dnviti/codeclaw</a>
       </div>
 
       <ul class="claude-bullets">
         <li>Claude Code is the primary development environment for all personal and open-source projects.</li>
-        <li>Built CTDF plugin: 5 slash-command skills, gated releases, per-PR sub-agents, multi-provider agentic fleet.</li>
+        <li>Built CodeClaw plugin: slash-command skills, gated releases, per-PR sub-agents, multi-provider agentic fleet.</li>
         <li>MCP server integration expertise; prompt engineering for structured AI-driven development workflows.</li>
         <li>Uses Claude Code for infrastructure automation, code review, security analysis, and documentation.</li>
       </ul>
