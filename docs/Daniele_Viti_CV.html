@@ -28,28 +28,29 @@
     --section-icon: #6b7a8d;
   }
 
-  html { font-size: 15px; scroll-behavior: smooth; }
+  @page { size: A4; margin: 0; }
+
+  html { font-size: 10.5px; scroll-behavior: smooth; }
 
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background: #0f1923;
     color: var(--text-dark);
-    line-height: 1.6;
-    min-height: 100vh;
+    line-height: 1.45;
   }
 
   .cv-container {
     display: flex;
-    max-width: 1180px;
+    width: 210mm;
+    min-height: 295mm;
     margin: 0 auto;
-    min-height: 100vh;
     box-shadow: 0 0 80px rgba(0,0,0,0.4);
   }
 
   /* ── SIDEBAR ── */
   .sidebar {
-    width: 280px;
-    min-width: 280px;
+    width: 62mm;
+    min-width: 62mm;
     background: var(--sidebar-bg);
     color: var(--text-light);
     padding: 0;
@@ -59,16 +60,16 @@
 
   .sidebar-header {
     text-align: center;
-    padding: 2.2rem 1.5rem 1.5rem;
+    padding: 1.4rem 1rem 1rem;
     background: var(--sidebar-dark);
   }
 
   .avatar {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     border: 3px solid var(--accent);
-    margin: 0 auto 1rem;
+    margin: 0 auto 0.6rem;
     object-fit: cover;
   }
 
@@ -98,9 +99,9 @@
     font-weight: 500;
   }
 
-  .sidebar-body { padding: 1.2rem 1.4rem 2rem; flex: 1; }
+  .sidebar-body { padding: 1rem 1.1rem 1.2rem; flex: 1; }
 
-  .sidebar-section { margin-bottom: 1.4rem; }
+  .sidebar-section { margin-bottom: 0.95rem; }
 
   .sidebar-section-title {
     font-size: 0.72rem;
@@ -254,47 +255,47 @@
   .main {
     flex: 1;
     background: var(--main-bg);
-    padding: 2.2rem 2.5rem;
+    padding: 1.05rem 1.5rem;
     overflow-y: auto;
   }
 
-  .main-header { margin-bottom: 2rem; }
+  .main-header { margin-bottom: 0.65rem; }
 
   .main-header h1 {
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-weight: 800;
     color: var(--text-dark);
     line-height: 1.1;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.3rem;
   }
 
   .main-header .tagline {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: var(--accent);
     font-weight: 500;
   }
 
   /* Sections */
-  .section { margin-bottom: 1.8rem; }
+  .section { margin-bottom: 0.58rem; }
 
   .section-title {
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 700;
     color: var(--text-dark);
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.42rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     border-bottom: 2px solid var(--border);
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.28rem;
   }
 
   .section-icon { font-size: 1.1rem; }
 
   /* Experience */
-  .exp-block { margin-bottom: 1.4rem; }
+  .exp-block { margin-bottom: 0.62rem; }
 
   .exp-header {
     display: flex;
@@ -323,10 +324,10 @@
   }
 
   .exp-company {
-    font-size: 0.88rem;
+    font-size: 0.86rem;
     color: var(--text-muted);
     font-style: italic;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
   }
 
   .exp-company a {
@@ -343,13 +344,15 @@
   }
 
   .exp-list li {
-    font-size: 0.88rem;
+    font-size: 0.86rem;
     color: var(--text-muted);
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.16rem;
     padding-left: 1rem;
     position: relative;
-    line-height: 1.55;
+    line-height: 1.38;
   }
+
+  .exp-list li strong { color: var(--text-dark); font-weight: 600; }
 
   .exp-list li::before {
     content: '\25B8';
@@ -361,10 +364,9 @@
 
   /* Professional summary */
   .summary-text {
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     color: var(--text-muted);
-    line-height: 1.7;
-    max-width: 680px;
+    line-height: 1.5;
   }
 
   /* CodeClaw box */
@@ -373,8 +375,8 @@
     border: 1px solid var(--border);
     border-left: 4px solid var(--coral);
     border-radius: 6px;
-    padding: 1rem 1.2rem;
-    margin-bottom: 1rem;
+    padding: 0.7rem 0.9rem;
+    margin-bottom: 0.6rem;
   }
 
   .codeclaw-title {
@@ -416,16 +418,16 @@
   .claude-bullets {
     list-style: none;
     padding: 0;
-    margin-top: 0.8rem;
+    margin-top: 0.5rem;
   }
 
   .claude-bullets li {
     font-size: 0.85rem;
     color: var(--text-muted);
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.22rem;
     padding-left: 1.4rem;
     position: relative;
-    line-height: 1.55;
+    line-height: 1.4;
   }
 
   .claude-bullets li::before {
@@ -454,10 +456,10 @@
 
   /* Projects */
   .project-item {
-    font-size: 0.87rem;
+    font-size: 0.86rem;
     color: var(--text-muted);
-    margin-bottom: 0.4rem;
-    line-height: 1.55;
+    margin-bottom: 0.25rem;
+    line-height: 1.4;
   }
 
   .project-item strong { color: var(--text-dark); font-weight: 600; }
@@ -484,12 +486,12 @@
 
   /* Soft skills */
   .soft-item {
-    font-size: 0.87rem;
+    font-size: 0.86rem;
     color: var(--text-muted);
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.22rem;
     padding-left: 1.4rem;
     position: relative;
-    line-height: 1.55;
+    line-height: 1.4;
   }
 
   .soft-icon {
@@ -502,16 +504,16 @@
   .cv-footer {
     display: flex;
     justify-content: space-between;
-    margin-top: 2rem;
-    padding-top: 1rem;
+    margin-top: 1rem;
+    padding-top: 0.5rem;
     border-top: 1px solid var(--border);
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     color: #aab3c0;
     font-style: italic;
   }
 
-  /* ── RESPONSIVE ── */
-  @media (max-width: 860px) {
+  /* ── RESPONSIVE (screen only — print/PDF keeps the A4 two-column layout) ── */
+  @media screen and (max-width: 860px) {
     .cv-container { flex-direction: column; }
     .sidebar { width: 100%; min-width: 100%; }
     .sidebar-body {
@@ -524,21 +526,48 @@
     .main-header h1 { font-size: 1.8rem; }
   }
 
-  @media (max-width: 480px) {
+  @media screen and (max-width: 480px) {
     html { font-size: 14px; }
     .sidebar-body { grid-template-columns: 1fr; }
   }
 
-  /* Print */
+  /* Download PDF button (screen only) */
+  .pdf-download {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 100;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--coral);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.7rem 1.1rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    transition: transform 0.15s, background 0.15s;
+  }
+
+  .pdf-download:hover { background: var(--coral-light); transform: translateY(-2px); }
+
+  .pdf-download .pdf-icon { font-size: 1.05rem; }
+
+  /* Print — keep the compact A4 layout; only adjust colors for print */
   @media print {
     body { background: #fff; }
-    .cv-container { box-shadow: none; max-width: 100%; }
-    .sidebar { background: var(--sidebar-bg) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    .main { padding: 1.5rem; }
+    .cv-container { box-shadow: none; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .sidebar { background: var(--sidebar-bg) !important; }
+    .pdf-download { display: none !important; }
   }
 </style>
 </head>
 <body>
+<a class="pdf-download" href="Daniele_Viti_CV.pdf" download="Daniele_Viti_CV.pdf"><span class="pdf-icon">&#x2B07;&#xFE0F;</span> Download PDF</a>
 <div class="cv-container">
 
   <!-- ── SIDEBAR ── -->
@@ -565,52 +594,32 @@
       <div class="sidebar-section">
         <div class="sidebar-section-title">CORE SKILLS</div>
         <div class="skill-item">
-          <div class="skill-name">.NET / C# / Blazor</div>
-          <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-name">JavaScript / TypeScript</div>
+          <div class="skill-name">Web Development</div>
           <div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-name">Node.js / Express</div>
-          <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-name">React</div>
-          <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-name">Python</div>
-          <div class="skill-bar"><div class="skill-fill" style="width:72%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-name">SQL &mdash; Oracle / SQL Server / PostgreSQL</div>
-          <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-name">Docker / Podman</div>
+          <div class="skill-name">Cloud-Native &amp; DevOps</div>
           <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-name">Kubernetes / GitOps (ArgoCD)</div>
-          <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
+          <div class="skill-name">Linux &amp; Infrastructure</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-name">Linux Administration</div>
-          <div class="skill-bar"><div class="skill-fill" style="width:93%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-name">VMware / Proxmox / OpenShift</div>
-          <div class="skill-bar"><div class="skill-fill" style="width:82%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-name">Networking &amp; Security</div>
+          <div class="skill-name">Databases</div>
           <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
         </div>
         <div class="skill-item">
-          <div class="skill-name">CI/CD &amp; Git</div>
-          <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+          <div class="skill-name">Security &amp; PAM</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">AI &amp; LLM Integration</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name">IoT &amp; Industrial Systems</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
         </div>
       </div>
 
@@ -618,9 +627,7 @@
       <div class="sidebar-section">
         <div class="sidebar-section-title">CLAUDE CODE</div>
         <div class="claude-item">Daily driver for agentic coding</div>
-        <div class="claude-item">Author of CodeClaw plugin</div>
-        <div class="claude-item">AI-assisted development workflows</div>
-        <div class="claude-item">MCP server integration expertise</div>
+        <div class="claude-item">MCP server integration &amp; prompt engineering</div>
       </div>
 
       <!-- Languages -->
@@ -628,23 +635,6 @@
         <div class="sidebar-section-title">LANGUAGES</div>
         <div class="lang-item"><span class="flag">&#x1F1EE;&#x1F1F9;</span> Italian &mdash; Native</div>
         <div class="lang-item"><span class="flag">&#x1F1EC;&#x1F1E7;</span> English &mdash; Professional</div>
-      </div>
-
-      <!-- Tools & Tech -->
-      <div class="sidebar-section">
-        <div class="sidebar-section-title">TOOLS &amp; TECH</div>
-        <div class="sidebar-tags">
-          <span class="sidebar-tag">Prisma</span>
-          <span class="sidebar-tag">Socket.IO</span>
-          <span class="sidebar-tag">.NET MAUI</span>
-          <span class="sidebar-tag">Caddy</span>
-          <span class="sidebar-tag">Apache APISIX</span>
-          <span class="sidebar-tag">Cilium</span>
-          <span class="sidebar-tag">OpenID Connect</span>
-          <span class="sidebar-tag">GitHub Actions</span>
-          <span class="sidebar-tag">CodeQL</span>
-          <span class="sidebar-tag">Gitea</span>
-        </div>
       </div>
 
       <!-- Interests -->
@@ -694,9 +684,9 @@
         cloud-native infrastructure. Currently OpenSource Solution Architect at Var Group &mdash; one of Italy's
         leading IT integrators &mdash; building Kubernetes clusters, driving GitOps adoption, and architecting
         Hybrid-Cloud infrastructure for Business Continuity and Industrial IoT. Background as a senior .NET
-        full-stack developer (Blazor, .NET 7, MAUI, OAuth2/OIDC, Oracle/SQL Server). Creator of Arsenale, an
-        open-source PAM platform, and author of CodeClaw &mdash; a Claude Code plugin for structured task
-        management and gated release pipelines. Runs a private datacenter for self-hosted services including AI inference.
+        full-stack developer (Blazor, .NET 7, MAUI, OAuth2/OIDC, Oracle/SQL Server). Creator of Arsenale
+        (open-source PAM platform) and CodeClaw (a Claude Code plugin), and runs a private datacenter for
+        self-hosted services including AI inference.
       </p>
     </div>
 
@@ -742,76 +732,24 @@
         </div>
         <div class="exp-company">OMA &mdash; Officine Meccaniche Aeronautiche &middot; Foligno, Italy</div>
         <ul class="exp-list">
-          <li>Built the internal integration platform (SLIM &mdash; Safe Light Information Management) from scratch on .NET 7 with Blazor, MVC APIs, and an Android app in MAUI.</li>
-          <li>Developed an SSO authentication server with OpenID Connect (OAuth2 flows).</li>
-          <li>Worked with Oracle and SQL Server databases.</li>
-          <li>Managed the development stack (Git, CI/CD, Docker, Linux VMs).</li>
-          <li>Coordinated internal and external developers (consultants, freelancers).</li>
+          <li>Built the internal integration platform (SLIM) from scratch &mdash; .NET 7, Blazor, MVC APIs, and a MAUI Android app.</li>
+          <li>Developed an SSO server with OpenID Connect (OAuth2); worked with Oracle and SQL Server.</li>
+          <li>Owned the dev stack (Git, CI/CD, Docker, Linux VMs) and coordinated internal/external developers.</li>
         </ul>
       </div>
 
       <div class="exp-block">
         <div class="exp-header">
-          <span class="exp-title">.NET Senior Full-Stack Developer</span>
-          <span class="exp-badge">2019 &ndash; 2023</span>
+          <span class="exp-title">Earlier Roles</span>
+          <span class="exp-badge">2015 &ndash; 2023</span>
         </div>
-        <div class="exp-company">CommandWare &middot; Freelance &middot; Foligno, Italy (Hybrid)</div>
         <ul class="exp-list">
-          <li>Independent senior full-stack .NET engagements for client projects, delivered alongside in-house roles.</li>
+          <li><strong>Senior Full-Stack .NET</strong> &mdash; CommandWare, Freelance (2019&ndash;2023) &middot; independent client engagements.</li>
+          <li><strong>Software Developer</strong> &mdash; Assist Informatica (2021&ndash;2022).</li>
+          <li><strong>PLM Business Consultant</strong> &mdash; K2innovation, Turin (2020&ndash;2021) &middot; Aras Innovator configuration &amp; development.</li>
+          <li><strong>Digital Skills Teacher</strong> &mdash; EGInA, Freelance (2019&ndash;2021) &middot; Scratch programming &amp; digital-skills labs.</li>
+          <li><strong>IT Specialist</strong> &mdash; OMA (2015&ndash;2019) &middot; VMs, ERP modules, integration projects, IT operations.</li>
         </ul>
-      </div>
-
-      <div class="exp-block">
-        <div class="exp-header">
-          <span class="exp-title">Software Developer</span>
-          <span class="exp-badge">2021 &ndash; 2022</span>
-        </div>
-        <div class="exp-company">Assist Informatica &middot; Bastia Umbra, Italy</div>
-      </div>
-
-      <div class="exp-block">
-        <div class="exp-header">
-          <span class="exp-title">PLM Business Consultant</span>
-          <span class="exp-badge">2020 &ndash; 2021</span>
-        </div>
-        <div class="exp-company">K2innovation &middot; Turin, Italy</div>
-        <ul class="exp-list">
-          <li>Aras Innovator PLM configuration and development.</li>
-        </ul>
-      </div>
-
-      <div class="exp-block">
-        <div class="exp-header">
-          <span class="exp-title">Digital Skills Teacher &mdash; Docente di Potenziamento</span>
-          <span class="exp-badge">2019 &ndash; 2021</span>
-        </div>
-        <div class="exp-company">European Grants International Academy &middot; Freelance &middot; Foligno, Italy</div>
-        <ul class="exp-list">
-          <li>Taught Scratch programming to middle-school students.</li>
-          <li>Led a hands-on lab developing practical digital skills in multimedia content creation (PON Massa Martana 2019).</li>
-        </ul>
-      </div>
-
-      <div class="exp-block">
-        <div class="exp-header">
-          <span class="exp-title">IT Specialist</span>
-          <span class="exp-badge">2015 &ndash; 2019</span>
-        </div>
-        <div class="exp-company">OMA &mdash; Officine Meccaniche Aeronautiche &middot; Foligno, Italy</div>
-        <ul class="exp-list">
-          <li>Installed and configured Linux/Windows application virtual machines.</li>
-          <li>Developed corporate ERP modules and supporting tools across multiple languages.</li>
-          <li>Managed software development and integration projects; authored technical and functional specifications.</li>
-          <li>Drove continuous improvement across IT operations.</li>
-        </ul>
-      </div>
-
-      <div class="exp-block">
-        <div class="exp-header">
-          <span class="exp-title">IT Intern</span>
-          <span class="exp-badge">2015</span>
-        </div>
-        <div class="exp-company">OMA &mdash; Officine Meccaniche Aeronautiche &middot; Foligno, Italy</div>
       </div>
     </div>
 
@@ -822,18 +760,15 @@
       <div class="codeclaw-box">
         <div class="codeclaw-title">CodeClaw <span class="codeclaw-version">Claude Code Plugin</span></div>
         <p class="codeclaw-desc">
-          Open-source Claude Code plugin for structured task &amp; idea management with a gated release pipeline, parallel
-          sub-agent orchestration, Git worktrees, GitHub/GitLab Issues integration, agentic fleet CI/CD, and Docker tagging
-          strategy. MIT licensed.
+          Open-source Claude Code plugin for structured task management with gated release pipelines, parallel
+          sub-agent orchestration, Git worktrees, GitHub/GitLab integration, and agentic fleet CI/CD. MIT licensed.
         </p>
         <a class="codeclaw-link" href="https://github.com/dnviti/codeclaw" target="_blank">github.com/dnviti/codeclaw</a>
       </div>
 
       <ul class="claude-bullets">
-        <li>Claude Code is the primary development environment for all personal and open-source projects.</li>
-        <li>Built CodeClaw plugin: slash-command skills, gated releases, per-PR sub-agents, multi-provider agentic fleet.</li>
-        <li>MCP server integration expertise; prompt engineering for structured AI-driven development workflows.</li>
-        <li>Uses Claude Code for infrastructure automation, code review, security analysis, and documentation.</li>
+        <li>Primary development environment across all personal and open-source projects.</li>
+        <li>MCP integration, prompt engineering, infrastructure automation, code review, and security analysis.</li>
       </ul>
     </div>
 
@@ -847,66 +782,22 @@
     <!-- Other Projects -->
     <div class="section">
       <div class="section-title"><span class="section-icon">&#x1F4E6;</span> OTHER PROJECTS &amp; OPEN SOURCE</div>
-      <div class="project-item"><span class="project-icon">&#x1F4E6;</span><strong>Arsenale PAM</strong> &mdash; Self-hosted PAM platform &mdash; 82 repos on GitHub. Arctic Code Vault Contributor.</div>
-      <div class="project-item"><span class="project-icon">&#x1F916;</span><strong>Arsenale AI Chatbot</strong> &mdash; Self-hosted LLM (Qwen 3.5 0.8B / llama.cpp) + RAG, private datacenter infrastructure.</div>
-      <div class="project-item"><span class="project-icon">&#x1F527;</span><strong>Infra Tooling</strong> &mdash; Docker/iptables networking, Caddy TLS reverse proxy, cloud automation scripts.</div>
+      <div class="project-item"><span class="project-icon">&#x1F916;</span><strong>Self-Hosted AI Chatbot</strong> &mdash; Local LLM (Qwen / llama.cpp) with RAG, running on private datacenter infrastructure.</div>
+      <div class="project-item"><span class="project-icon">&#x1F527;</span><strong>Infra Tooling</strong> &mdash; Container networking, Caddy TLS reverse proxy, and cloud automation scripts.</div>
     </div>
 
-    <!-- Security Expertise -->
+    <!-- Areas of Expertise -->
     <div class="section">
-      <div class="section-title"><span class="section-icon">&#x1F6E1;&#xFE0F;</span> SECURITY EXPERTISE</div>
+      <div class="section-title"><span class="section-icon">&#x1F9E9;</span> AREAS OF EXPERTISE</div>
       <div class="tags">
-        <span class="tag">Privileged Access Management</span>
-        <span class="tag">Vulnerability Assessment (OWASP / CVSS / CWE)</span>
-        <span class="tag">Secure Code Review</span>
-        <span class="tag">Authentication &amp; MFA</span>
-        <span class="tag">Applied Cryptography</span>
-        <span class="tag">Secrets &amp; Vault Management</span>
-        <span class="tag">TLS / mTLS &amp; PKI</span>
-        <span class="tag">Zero Trust Architecture</span>
-      </div>
-    </div>
-
-    <!-- Infrastructure & Homelab -->
-    <div class="section">
-      <div class="section-title"><span class="section-icon">&#x1F5A5;&#xFE0F;</span> INFRASTRUCTURE &amp; HOMELAB</div>
-      <div class="tags">
-        <span class="tag">Private Datacenter</span>
-        <span class="tag">Self-Hosted LLM</span>
-        <span class="tag">Proxmox / OpenShift</span>
-        <span class="tag">Hetzner Cloud VPS</span>
-        <span class="tag">Docker Compose</span>
-        <span class="tag">Caddy Reverse Proxy</span>
-        <span class="tag">Linux Networking &amp; TLS</span>
-      </div>
-    </div>
-
-    <!-- Methodologies -->
-    <div class="section">
-      <div class="section-title"><span class="section-icon">&#x1F504;</span> METHODOLOGIES &amp; PRACTICES</div>
-      <div class="tags">
-        <span class="tag">Agile / Kanban</span>
-        <span class="tag">GitFlow / GitOps</span>
-        <span class="tag">IaC &amp; CI/CD</span>
-        <span class="tag">Threat Modeling</span>
-        <span class="tag">Microservices &amp; Event-Driven</span>
-        <span class="tag">API-First (REST / WebSocket)</span>
-        <span class="tag">Multi-Tenancy</span>
-        <span class="tag">12-Factor Apps</span>
-      </div>
-    </div>
-
-    <!-- AI & LLM Stack -->
-    <div class="section">
-      <div class="section-title"><span class="section-icon">&#x1F9E0;</span> AI &amp; LLM STACK</div>
-      <div class="tags">
-        <span class="tag">Claude Code</span>
-        <span class="tag">Claude API &amp; MCP</span>
-        <span class="tag">Prompt Engineering</span>
-        <span class="tag">RAG Pipelines</span>
-        <span class="tag">Vector DBs (ChromaDB / SQLite-vec)</span>
-        <span class="tag">llama.cpp / Qwen</span>
-        <span class="tag">LLM Self-Hosting</span>
+        <span class="tag">Web Development</span>
+        <span class="tag">Cloud-Native &amp; Kubernetes</span>
+        <span class="tag">DevOps &amp; GitOps</span>
+        <span class="tag">Infrastructure &amp; Self-Hosting</span>
+        <span class="tag">IoT &amp; Industrial Systems</span>
+        <span class="tag">Security &amp; PAM</span>
+        <span class="tag">AI &amp; LLM Integration</span>
+        <span class="tag">Databases</span>
       </div>
     </div>
 
@@ -914,11 +805,9 @@
     <div class="section">
       <div class="section-title"><span class="section-icon">&#x1F91D;</span> SOFT SKILLS &amp; APPROACH</div>
       <div class="soft-item"><span class="soft-icon">&#x1F9E9;</span> Problem solver with a security-first, automation-driven mindset.</div>
-      <div class="soft-item"><span class="soft-icon">&#x1F91D;</span> Strong cross-team collaboration; bridge between dev, ops, and security.</div>
-      <div class="soft-item"><span class="soft-icon">&#x1F4DA;</span> Continuous learner &mdash; actively explores AI/LLM tooling, emerging frameworks, and open-source ecosystems.</div>
-      <div class="soft-item"><span class="soft-icon">&#x1F680;</span> Self-starter: built and maintains production-grade open-source projects end-to-end.</div>
-      <div class="soft-item"><span class="soft-icon">&#x1F4AC;</span> Effective technical communicator &mdash; documentation, architecture diagrams, and stakeholder reporting.</div>
-      <div class="soft-item"><span class="soft-icon">&#x1F310;</span> Open-source advocate &mdash; contributes to community-driven projects and knowledge sharing.</div>
+      <div class="soft-item"><span class="soft-icon">&#x1F91D;</span> Cross-team collaborator bridging dev, ops, and security.</div>
+      <div class="soft-item"><span class="soft-icon">&#x1F680;</span> Self-starter who ships and maintains production open-source end-to-end.</div>
+      <div class="soft-item"><span class="soft-icon">&#x1F4AC;</span> Clear technical communicator &mdash; docs, architecture, stakeholder reporting.</div>
     </div>
 
     <div class="cv-footer">

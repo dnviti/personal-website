@@ -74,20 +74,31 @@ def html_to_pdf(html_path: Path, pdf_path: Path):
             return { width: rect.width, height: rect.height };
         }""")
 
-        width_in = dimensions["width"] / 96   # px to inches at 96 DPI
-        height_in = dimensions["height"] / 96
+        # A4 portrait at 96 DPI is ~794px wide. If the layout is built to A4
+        # width, emit a fixed single A4 page (the CV must stay one A4 page).
+        # Otherwise fall back to auto-sizing the page to the content.
+        is_a4 = 780 <= dimensions["width"] <= 810
 
-        # Small padding to avoid clipping
-        height_in += 0.3
+        if is_a4:
+            page.pdf(
+                path=str(pdf_path),
+                format="A4",
+                margin={"top": "0", "right": "0", "bottom": "0", "left": "0"},
+                print_background=True,
+                prefer_css_page_size=True,
+            )
+        else:
+            width_in = dimensions["width"] / 96   # px to inches at 96 DPI
+            height_in = dimensions["height"] / 96 + 0.3  # padding to avoid clipping
 
-        page.pdf(
-            path=str(pdf_path),
-            width=f"{width_in}in",
-            height=f"{height_in}in",
-            margin={"top": "0", "right": "0", "bottom": "0", "left": "0"},
-            print_background=True,
-            prefer_css_page_size=False,
-        )
+            page.pdf(
+                path=str(pdf_path),
+                width=f"{width_in}in",
+                height=f"{height_in}in",
+                margin={"top": "0", "right": "0", "bottom": "0", "left": "0"},
+                print_background=True,
+                prefer_css_page_size=False,
+            )
 
         browser.close()
 
